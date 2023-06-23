@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 // Creting Route controller and group them
 Route::controller(DemoController::class)->group(function () {
-    Route::get('/about', 'Index');
+    Route::get('/about', 'Index')->middleware('check');
     Route::get('/contact', 'Contact');
 });
 

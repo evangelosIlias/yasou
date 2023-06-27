@@ -44,6 +44,7 @@
             @include('admin.body.sidebar')
 
             <div class="main-content">
+                
             @yield('admin')
             <!-- End Page-content -->
         

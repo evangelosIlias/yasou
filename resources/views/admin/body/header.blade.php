@@ -52,7 +52,7 @@
                     <img class="rounded-circle header-profile-user" src="{{ asset('upload/admin_images/' . Auth::user()->profile_image) }}"
                     
                         alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ms-1">Julia</span>
+                        <span class="d-none d-xl-inline-block ms-1">{{ Auth::user()->name }}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">

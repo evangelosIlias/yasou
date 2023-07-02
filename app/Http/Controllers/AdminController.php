@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -51,7 +52,49 @@ class AdminController extends Controller
         
         $storeData->save();
 
-        return redirect()->route('admin.profile');
+        $notification = [
+            'message' => 'Admin Profile Updated Successfully',
+            'alert-type' => 'success',
+        ];
+        
+        return redirect()->route('admin.profile')->with($notification);
     }
+
+    public function changePassword()
+    {
+        return view ('admin.admin_change_password');
+    }
+
+    public function updatePassword(Request $request): RedirectResponse
+    {
+        $validateData = $request->validate([
+            'oldpassword' => 'required',
+            'newpassword' => 'required',
+            'confirmpassword' => 'required|same:newpassword',
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->oldpassword, $hashedPassword)) {
+            $user = User::find(Auth::id());
+            $user->password = bcrypt($request->newpassword);
+            $user->save();
+
+            $note_succ = [
+                'message' => 'Password Updated Successfully',
+                'alert-type' => 'success',
+            ];
+
+            return redirect()->back()->with($note_succ);
+        } else {
+            $note_warn = [
+                'message' => 'Old Password does nott much',
+                'alert-type' => 'error',
+            ];
+
+            return redirect()->back()->with($note_warn);
+        }
+
+    }
+
 
 }

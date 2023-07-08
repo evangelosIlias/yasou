@@ -1,3 +1,8 @@
+@extends('frontend.main_master')
+
+@section('main')
+
+
 <div class="row about-content">
 
     <div class="col-six tab-full">
@@ -232,3 +237,5 @@
    </div> <!-- /resume-timeline -->
     
 </section> <!-- /features -->
+
+@endsection

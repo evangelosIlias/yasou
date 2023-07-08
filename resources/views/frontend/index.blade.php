@@ -48,26 +48,24 @@
 
                 <img src="frontend/assets/img/beach.jpeg" alt="Profile Picture">
 
-                <p class="lead">Hi, I'm Evangelos, a junior back-end PHP developer with a strong focus in Laravel. 
-                    With a background in Geographic Information Systems (GIS), I made a career shift into the coding world, 
-                    pursuing my passion for developing robust web applications. I specialize in leveraging the power of Laravel 
-                    framework to build efficient and scalable back-end solutions. With expertise in PHP and database management, 
-                    I excel in crafting RESTful APIs, handling data retrieval, and implementing secure authentication systems.
-                    I thrive on problem-solving and enjoy tackling complex challenges in the development process. Continuously 
-                    learning and staying up-to-date with the latest trends and advancements in Laravel and PHP is my priority.
-                    I take pride in delivering high-quality code, writing unit tests,
-                    and ensuring the stability and reliability of the applications I develop.
-                    I'm passionate about creating innovative solutions and always ready to take on new projects. Let's connect and bring your ideas to life!"</p>
+                <p class="lead">Hi, I'm Evangelos, a junior PHP Laravel developer with a passion for building robust and scalable web applications. 
+                    I have a solid foundation in PHP programming and have recently focused my attention on mastering the Laravel framework. 
+                    I have gained a strong understanding of PHP and its various libraries and frameworks. 
+                    I am particularly skilled in Laravel, as it provides an elegant and efficient way to develop modern web applications. 
+                    I enjoy leveraging Laravel's features, and creating small projects in order to create efficient, maintainable, and secure code.
+                    As a junior developer, I am eager to learn and grow in a supportive environment. 
+                    I am constantly exploring new technologies and staying up to date with the latest trends in web development. 
+                    I am excited about the opportunity to work on challenging projects that will allow me to enhance my skills and make meaningful contributions to the team.
+                    I am a detail-oriented individual with a strong problem-solving mindset. 
+                    I enjoy breaking down complex problems into manageable tasks and finding innovative solutions. 
+                    I am committed to writing clean and well-documented code that is both efficient and maintainable.
+                    I am confident that my passion for PHP Laravel development, coupled with my dedication and willingness to learn, 
+                    make me a valuable asset to any development team."</p>
             </div>   			
 
         </div>   		
-    </div> <!-- /section-intro -->
-
-    
-
-            
+    </div> <!-- /section-intro -->            
 </section> <!-- /process-->    
-
 
 
 

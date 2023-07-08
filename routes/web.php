@@ -23,6 +23,11 @@ Route::get('/dashboard', function () {
     return view('admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/resume', function () {
+    return view('frontend.body.resume');
+})->name('resume');
+
+
 // Admin all Route
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'destroy')->name('admin.logout');

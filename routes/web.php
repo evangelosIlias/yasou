@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Home\HomeSliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,11 +24,6 @@ Route::get('/dashboard', function () {
     return view('admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/resume', function () {
-    return view('frontend.body.resume');
-})->name('resume');
-
-
 // Admin all Route
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
@@ -36,6 +32,12 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/store/profile', 'storeProfile')->name('store.profile');
     Route::get('/change/password', 'changePassword')->name('change.password');
     Route::post('/update/password', 'updatePassword')->name('update.password');
+});
+
+// Home Slde All Route
+Route::controller(HomeSliderController::class)->group(function () {
+    Route::get('/home/slide', 'homeSlide')->name('home.slide');
+    Route::post('/update/slide', 'updateSlide')->name('update.slide');
 });
 
 Route::middleware('auth')->group(function () {

@@ -1,52 +1,64 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
-<head>
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Welcome in my personal portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <!--- basic page needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>Yasou</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+        <!-- Place favicon.ico in the root directory -->
 
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- CSS here -->
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/fontawesome-all.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/default.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css')}}">
+    </head>
+    <body>
 
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="{{ asset('frontend/assets/css/base.css')}} ">  
-   <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css')}} ">
-   <link rel="stylesheet" href="{{ asset('frontend/assets/css/vendor.css')}} ">     
+        <!-- preloader-start -->
+        <div id="preloader">
+            <div class="rasalina-spin-box"></div>
+        </div>
+        <!-- preloader-end -->
 
-   <!-- script
-   ================================================== -->   
-	<script src="{{ asset('frontend/assets/js/modernizr.js')}} "></script>
-	<script src="{{ asset('frontend/assets/js/pace.min.js')}} "></script>
+		<!-- Scroll-top -->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <!-- Scroll-top-end-->
 
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="{{ asset('frontend/assets/img/png')}}" href="favicon.png">
+        <!-- header-area -->
+         @include('frontend.body.header')
+        <!-- header-area-end -->
 
-</head>
+        <!-- main-area -->
+        <main>
+            @yield('main')
+        </main>
+        <!-- main-area-end -->
 
-<body id="top">
+        <!-- Footer-area -->
+        @include('frontend.body.footer')
+        <!-- Footer-area-end -->
 
-<!-- Start Header -->
-@include('frontend.body.header')
-
-<!-- Start Nav -->
-@include('frontend.body.navbar')
-
-<!-- The main index yied -->
-<main>
-    @yield('main')
-</main>
-
-<!-- Start right Footer here -->
-@include('frontend.body.footer')
-
-</body>
+		<!-- JS here -->
+        <script src="{{ asset('frontend/assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/isotope.pkgd.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/imagesloaded.pkgd.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/jquery.magnific-popup.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/element-in-view.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/slick.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/ajax-form.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/wow.min.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/plugins.js')}}"></script>
+        <script src="{{ asset('frontend/assets/js/main.js')}}"></script>
+    </body>
 </html>

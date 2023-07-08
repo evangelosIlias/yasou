@@ -1,42 +1,58 @@
-   <!-- footer
-   ================================================== -->
-
-   <footer>
-    <div class="row">
-
-        <div class="col-six tab-full pull-right social">
-
-            <ul class="footer-social">        
-             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-             <li><a href="#"><i class="fa fa-behance"></i></a></li>
-             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          </ul> 
-             
-     </div>
-
-     <div class="col-eight tab-full">
-         <div class="copyright">
-               <span>© Copyright 2018 </span> 
-               <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span> 
-               <span>Distributed by <a href="https://themewagon.com/">themewagon</a></span>	         	
-            </div>		                  
-         </div>
-
-         <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-         </div>
-
-     </div> <!-- /row -->     	
-</footer>  
-
-<div id="preloader"> 
-   <div id="loader"></div>
-</div> 
-
-<!-- Java Script
-================================================== --> 
-<script src="{{ asset('frontend/assets/js/jquery-2.1.3.min.js')}} "></script>
-<script src="{{ asset('frontend/assets/js/plugins.js')}} "></script>
-<script src="{{ asset('frontend/assets/js/main.js')}} "></script>
+<footer class="footer">
+   <div class="container">
+       <div class="row justify-content-between">
+           <div class="col-lg-4">
+               <div class="footer__widget">
+                   <div class="fw-title">
+                       <h5 class="sub-title">Contact us</h5>
+                       <h4 class="title">+81383 766 284</h4>
+                   </div>
+                   <div class="footer__widget__text">
+                       <p>There are many variations of passages of lorem ipsum
+                       available but the majority have suffered alteration
+                       in some form is also here.</p>
+                   </div>
+               </div>
+           </div>
+           <div class="col-xl-3 col-lg-4 col-sm-6">
+               <div class="footer__widget">
+                   <div class="fw-title">
+                       <h5 class="sub-title">my address</h5>
+                       <h4 class="title">AUSTRALIA</h4>
+                   </div>
+                   <div class="footer__widget__address">
+                       <p>Level 13, 2 Elizabeth Steereyt set <br> Melbourne, Victoria 3000</p>
+                       <a href="mailto:noreply@envato.com" class="mail">noreply@envato.com</a>
+                   </div>
+               </div>
+           </div>
+           <div class="col-xl-3 col-lg-4 col-sm-6">
+               <div class="footer__widget">
+                   <div class="fw-title">
+                       <h5 class="sub-title">Follow me</h5>
+                       <h4 class="title">socially connect</h4>
+                   </div>
+                   <div class="footer__widget__social">
+                       <p>Lorem ipsum dolor sit amet enim. <br> Etiam ullamcorper.</p>
+                       <ul class="footer__social__list">
+                           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                           <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                           <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </div>
+       <div class="copyright__wrap">
+           <div class="row">
+               <div class="col-12">
+                   <div class="copyright__text text-center">
+                       <p>Copyright @ 2023 All right Reserved</p>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</footer>

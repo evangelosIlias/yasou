@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('home_slides', function (Blueprint $table) {
-            $table->bigIncrements('slide_id');
+            $table->bigIncrements('id');
             $table->string('title')->nullable();
             $table->string('short_title')->nullable();
             $table->string('home_image')->nullable();

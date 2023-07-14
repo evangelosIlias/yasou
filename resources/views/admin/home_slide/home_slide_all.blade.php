@@ -13,15 +13,15 @@
             
                         <h4 class="card-title">Home Slide Page </h4>
             
-                        <form method="post" action="{{ route('update.slide')}}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('update.slide') }}" enctype="multipart/form-data">
                             @csrf
 
-                        <input type="hidden" name='slide_id' value="{{ $homeslide->slide_id}}">
+                        <input type="hidden" name='id' value="{{ $homeslide->id }}">
 
                         <div class="row mb-3">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">  </label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label"> </label>
                             <div class="col-sm-10">
-                                <img id="showImage" class="rounded-circle avatar-lg" src="{{ (!empty($homeslide->home_image)) ? url('upload/home_slide/'.$homeslide->home_image) : url('upload/no_image.svg') }}" alt="Card image cap" style="width: 200px; height: 200px; border: 5px solid rgba(138, 60, 221, 0.729);">
+                                <img id="showImage" class="rounded-circle avatar-lg" src="{{ (!empty($homeslide->home_image)) ? url($homeslide->home_image) : url('upload/no_image.svg') }}" alt="Card image cap" style="width: 200px; height: 200px; border: 5px solid rgba(138, 60, 221, 0.729);">
                             </div>
                         </div>
                             <!-- end row -->     

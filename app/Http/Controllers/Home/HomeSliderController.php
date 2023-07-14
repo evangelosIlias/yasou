@@ -28,7 +28,7 @@ class HomeSliderController extends Controller
     public function updateSlide(Request $request)
     {
         // dd('Inside updateSlide method');
-        $check_id = $request->id;
+        $slide_id = $request->id;
 
         if ($request->file('home_image')) {
             $image = $request->file('home_image');
@@ -38,7 +38,7 @@ class HomeSliderController extends Controller
 
             $save_url = 'upload/home_slide/' . $name_gen;
 
-            HomeSlide::findOrFail($check_id)->update([
+            HomeSlide::findOrFail($slide_id)->update([
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'video_url' => $request->video_url,
@@ -55,7 +55,7 @@ class HomeSliderController extends Controller
 
         } else { 
 
-            HomeSlide::findOrFail($check_id)->update([
+            HomeSlide::findOrFail($slide_id)->update([
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'video_url' => $request->video_url,

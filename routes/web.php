@@ -44,6 +44,8 @@ Route::controller(HomeSliderController::class)->group(function () {
 // Home About All Route
 Route::controller(AboutController::class)->group(function () {
     Route::get('/home/about', 'homeAbout')->name('home.about');
+    Route::post('/update/about', 'updateAbout')->name('update.about');
+    Route::get('/main/about', 'mainAbout')->name('main.about');
 });
 
 // Profile Authedication Route

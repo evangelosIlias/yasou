@@ -58,11 +58,10 @@
                         </div>
                         <!-- end row -->
             
-                        <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Main Slide">
+                        <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Slide">
                         </form>
                     </div>
                 </div>
-
     </div>
 </div>
 

@@ -28,11 +28,11 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('about', function (Blueprint $table) {
-            $table->string('title')->nullable();
-            $table->string('short_title')->nullable();
-            $table->text('short_description')->nullable();
-            $table->text('long_description')->nullable();
-            $table->string('about_image')->nullable();
+            $table->dropColumn('title');
+            $table->dropColumn('short_title');
+            $table->dropColumn('short_description');
+            $table->dropColumn('long_description');
+            $table->dropColumn('about_image');
         });
 
         Schema::dropIfExists('about');

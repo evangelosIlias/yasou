@@ -68,8 +68,12 @@ class AboutController extends Controller
         }
     }
 
-    public function mainAbout(){
-        $mainabout = About::latest()->first();
-        return view('frontend/main_about', compact('mainabout'));
+    public function about(){
+        $about_page = About::latest()->first();
+        return view('frontend.about_page', compact('about_page'));
+    }
+
+    public function aboutMultiImage() {
+        return view('admin.home_about.multi_image');
     }
 }

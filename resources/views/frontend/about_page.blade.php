@@ -24,11 +24,11 @@
         <div class="breadcrumb__wrap__icon">
             <ul>
                 <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon01.png')}}" alt=""></li>
-                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon02.png')}} " alt=""></li>
-                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon03.png')}} " alt=""></li>
-                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon04.png')}} " alt=""></li>
-                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon05.png')}} " alt=""></li>
-                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon06.png')}} " alt=""></li>
+                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon02.png')}}" alt=""></li>
+                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon03.png')}}" alt=""></li>
+                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon04.png')}}" alt=""></li>
+                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon05.png')}}" alt=""></li>
+                <li><img src="{{ asset('frontend/assets/img/icons/breadcrumb_icon06.png')}}" alt=""></li>
             </ul>
         </div>
     </section>
@@ -40,24 +40,24 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about__image">
-                        <img src="{{ $mainabout->about_image }}" alt="">
+                        <img src="{{ $about_page->about_image }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about__content">
                         <div class="section__title">
                             <span class="sub-title">01 - About me</span>
-                            <h2 class="title">{{ $mainabout->title }}</h2>
+                            <h2 class="title">{{ $about_page->title }}</h2>
                         </div>
                         <div class="about__exp">
                             <div class="about__exp__icon">
                                 <img src="{{ asset('frontend/assets/img/icons/about_icon.png') }}" alt="">
                             </div>
                             <div class="about__exp__content">
-                                <p><span>{{ $mainabout->short_title }}</p>
+                                <p><span>{!! $about_page->short_title !!}</p>
                             </div>
                         </div>
-                        <p class="desc">{{ $mainabout->short_description }}</p>
+                        <p class="desc">{{ $about_page->short_description }}</p>
                         <a href="about.html" class="btn">Download my resume</a>
                     </div>
                 </div>
@@ -85,19 +85,7 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
-                                <p class="desc">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of lorem ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the lorem ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated lorem ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                                <ul class="about__exp__list">
-                                    <li>
-                                        <h5 class="title">User experience design - (Product Design)</h5>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to unseery.</p>
-                                    </li>
-                                    <li>
-                                        <h5 class="title">Web and user interface design - Development</h5>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of lorem ipsum.</p>
-                                    </li>
-                                    <li>
-                                        <h5 class="title">Interaction design - Animation</h5>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.</p>
+                                <p class="desc">{{ $about_page->long_description }}</p>
                                     </li>
                                 </ul>
                             </div>

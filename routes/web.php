@@ -35,7 +35,7 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/update/password', 'updatePassword')->name('update.password');
 });
 
-// Home Slde All Route
+// Home Slide All Route
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get('/home/slide', 'homeSlide')->name('home.slide');
     Route::post('/update/slide', 'updateSlide')->name('update.slide');
@@ -45,7 +45,8 @@ Route::controller(HomeSliderController::class)->group(function () {
 Route::controller(AboutController::class)->group(function () {
     Route::get('/home/about', 'homeAbout')->name('home.about');
     Route::post('/update/about', 'updateAbout')->name('update.about');
-    Route::get('/main/about', 'mainAbout')->name('main.about');
+    Route::get('/about', 'about')->name('about.page');
+    Route::get('/about/multi/image', 'aboutMultiImage')->name('about.multi.image');
 });
 
 // Profile Authedication Route

@@ -39,6 +39,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('home.about')}}">About</a></li>
+                        <li><a href="{{ route('about.multi.image')}}">About Mutli Image</a></li>
                     </ul>
                 </li>
 

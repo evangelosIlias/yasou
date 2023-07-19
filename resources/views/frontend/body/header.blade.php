@@ -12,8 +12,8 @@
                             </div>
                             <div class="navbar__wrap main__menu d-none d-md-flex">
                                 <ul class="navigation">
-                                    <li class="active"><a href="/">Home</a></li>
-                                    <li><a href="{{ route('main.about')}}">About</a></li>
+                                    <li class="active"><a href="{{ url('/')}}">Home</a></li>
+                                    <li><a href="{{ route('about.page')}}">About</a></li>
                                     <li><a href="services-details.html">Services</a></li>
                                     <li class="menu-item-has-children"><a href="#">Portfolio</a>
                                         <ul class="sub-menu">
@@ -40,8 +40,8 @@
                         <nav class="menu__box">
                             <div class="close__btn"><i class="fal fa-times"></i></div>
                             <div class="nav-logo">
-                                <a href="index.html" class="logo__black"><img src="assets/img/logo/logo_black.png" alt=""></a>
-                                <a href="index.html" class="logo__white"><img src="assets/img/logo/logo_white.png" alt=""></a>
+                                {{-- <a href="index.html" class="logo__black"><img src="assets/img/logo/logo_black.png" alt=""></a> --}}
+                                {{-- <a href="index.html" class="logo__white"><img src="assets/img/logo/logo_white.png" alt=""></a> --}}
                             </div>
                             <div class="menu__outer">
                                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->

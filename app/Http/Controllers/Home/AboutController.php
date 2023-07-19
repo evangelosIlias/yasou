@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
+use App\Models\MultiImage;
 use Intervention\Image\Facades\Image;
 
 
@@ -23,6 +24,7 @@ class AboutController extends Controller
         return view('admin.home_about.home_about_all', compact('homeabout'));
     }
 
+    // Updating the about method and images
     public function updateAbout(Request $request)
     {
         // dd('Inside updateSlide method');
@@ -68,12 +70,39 @@ class AboutController extends Controller
         }
     }
 
+    // Returning the view of about page
     public function about(){
         $about_page = About::latest()->first();
         return view('frontend.about_page', compact('about_page'));
     }
 
+    // Returning the view of multi images
     public function aboutMultiImage() {
         return view('admin.home_about.multi_image');
     }
+
+    // Creeating the multi image method
+    public function storeMutliImage(Request $request)
+    {
+        $images = $request->file('mutli_image');
+
+        foreach ($images as $image) {
+        $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+
+        Image::make($image)->resize(220, 220)->save('upload/multi_images_loc/' . $name_gen);
+
+        $save_url = 'upload/multi_images_loc/' . $name_gen;
+
+        $multiImage = new MultiImage();
+        $multiImage->multi_image = $save_url;
+        $multiImage->save();
+        } // End foreach
+
+        $not_succ = [
+            'message' => 'Multi Image Inserted Successfully',
+            'alert-type' => 'success',
+        ];
+
+        return redirect()->back()->with($not_succ);
+    }   
 }

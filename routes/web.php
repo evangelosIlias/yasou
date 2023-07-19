@@ -49,7 +49,10 @@ Route::controller(AboutController::class)->group(function () {
     Route::post('/update/about', 'updateAbout')->name('update.about');
     Route::get('/about', 'about')->name('about.page');
     Route::get('/about/multi/image', 'aboutMultiImage')->name('about.multi.image');
+    Route::post('/store/multi/image', 'storeMutliImage')->name('store.multi.image');
 });
+
+
 
 // Profile Authedication Route
 Route::middleware('auth')->group(function () {

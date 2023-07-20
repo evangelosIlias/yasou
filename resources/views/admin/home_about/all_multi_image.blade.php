@@ -42,12 +42,9 @@
                                 <th>Action</th>
                             </tr>
                             </thead>
-
-
                             <tbody>
                                 @php($i = 1)
                                 @foreach ($allMutliImage as $item)
-                                
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td><img src="{{ asset($item->multi_image) }}" style="width: 60px; height: 60px;"></td>
@@ -56,9 +53,7 @@
                                 <a href="" class="btn btn-danger sm" title="Delete Data"><i class="fas fa-trash"></i></a>    
                                 </td>
                             </tr>
-                             
                                 @endforeach
-
                             </tbody>
                         </table>
 

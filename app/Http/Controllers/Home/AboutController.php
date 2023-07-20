@@ -27,7 +27,6 @@ class AboutController extends Controller
     // Updating the about method and images
     public function updateAbout(Request $request)
     {
-        // dd('Inside updateSlide method');
         $about_id = $request->id;
 
         if ($request->file('about_image')) {
@@ -38,7 +37,8 @@ class AboutController extends Controller
 
             $save_url = 'upload/home_about/' . $name_gen;
 
-            About::findOrFail($about_id)->update([
+            // Find or create the About model
+            About::firstOrCreate(['id' => $about_id], [
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'short_description' => $request->short_description,
@@ -54,7 +54,8 @@ class AboutController extends Controller
             return redirect()->back()->with($not_succ);
 
         } else { 
-            About::findOrFail($about_id)->update([
+            // Find or create the About model
+            About::firstOrCreate(['id' => $about_id], [
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'short_description' => $request->short_description,

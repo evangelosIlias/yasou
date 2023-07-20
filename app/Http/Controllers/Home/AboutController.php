@@ -104,5 +104,12 @@ class AboutController extends Controller
         ];
 
         return redirect()->back()->with($not_succ);
-    }   
+    }
+    
+    public function allMultiImage() {
+
+        $allMutliImage = MultiImage::all();
+        return view('admin.home_about.all_multi_image', compact('allMutliImage'));
+
+    }
 }

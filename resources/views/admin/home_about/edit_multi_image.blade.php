@@ -15,7 +15,9 @@
             
                         <form method="post" action="{{ route('update.multi.image') }}" enctype="multipart/form-data">
                             @csrf
-                            <input type="hidden" name="id" value="{{ $editMultiImage->id}}">
+
+                        <input type="hidden" name="id" value="{{ $editMultiImage->id}}">
+
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label"> </label>
                             <div class="col-sm-10">
@@ -26,7 +28,7 @@
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">About Multi Image </label>
                             <div class="col-sm-10">
-                                <input name="mutli_image" class="form-control" type="file"  id="mutli_image">
+                                <input name="multi_image" class="form-control" type="file"  id="multi_image">
                             </div>
                         </div>
                         <!-- end row -->
@@ -35,13 +37,12 @@
                         </form>
                     </div>
                 </div>
-
     </div>
 </div>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#mutli_image').change(function(e) {
+        $('#multi_image').change(function(e) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 $('#showImage').attr('src', e.target.result);

@@ -137,6 +137,7 @@ class AboutController extends Controller
     
             MultiImage::findOrFail($updateMultiImage)->update([
                 'multi_image' => $save_url,
+                'updated_at' => Carbon::now()
             ]);
     
             $not_succ = [

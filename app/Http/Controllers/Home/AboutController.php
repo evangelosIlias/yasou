@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\MultiImage;
+use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
 
 
@@ -104,13 +105,69 @@ class AboutController extends Controller
             'alert-type' => 'success',
         ];
 
-        return redirect()->back()->with($not_succ);
+        return redirect()->route('all.multi.image')->with($not_succ);
     }
     
     public function allMultiImage() {
-
         $allMutliImage = MultiImage::all();
         return view('admin.home_about.all_multi_image', compact('allMutliImage'));
 
     }
+
+     // Edit the mutli image
+     public function editMultiImage($id){
+        $editMultiImage = MultiImage::findOrFail($id);
+        return view('admin.home_about.edit_multi_image', compact('editMultiImage'));
+        
+    }
+
+    // Update the multi images into database
+    public function updateMultiImage(Request $request) {
+
+        $updateMultiImage = $request->id;
+    
+        if ($request->file('multi_image')) {
+            $image = $request->file('multi_image');
+            $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+    
+            Image::make($image)->resize(220, 220)->save('upload/multi_images_loc/' . $name_gen);
+    
+            $save_url = 'upload/multi_images_loc/' . $name_gen;
+    
+            MultiImage::findOrFail($updateMultiImage)->update([
+                'multi_image' => $save_url,
+            ]);
+    
+            $not_succ = [
+                'message' => 'Home About and Image banner Updated Successfully',
+                'alert-type' => 'success',
+            ];
+    
+            return redirect()->route('all.multi.image')->with($not_succ);
+    
+        } else { 
+            $not_error = [
+                'message' => 'Failed to upload image',
+                'alert-type' => 'error',
+            ];
+    
+            return redirect()->route('all.multi.image')->with($not_error);
+        }
+    
+    }
+
+    
 }
+
+
+
+
+
+
+
+
+ 
+  
+
+    
+    

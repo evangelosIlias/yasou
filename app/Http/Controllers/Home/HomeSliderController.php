@@ -24,7 +24,6 @@ class HomeSliderController extends Controller
         return view('admin.home_slide.home_slide_all', compact('homeslide'));
     }
 
-
     public function updateSlide(Request $request)
     {
         // dd('Inside updateSlide method');
@@ -38,7 +37,7 @@ class HomeSliderController extends Controller
 
             $save_url = 'upload/home_slide/' . $name_gen;
 
-            HomeSlide::firstOrCreate(['id' => $slide_id])->update([
+            HomeSlide::findOrFail($slide_id)->update([
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'video_url' => $request->video_url,
@@ -55,7 +54,7 @@ class HomeSliderController extends Controller
 
         } else { 
 
-            HomeSlide::firstOrCreate(['id' => $slide_id])->update([
+            HomeSlide::findOrFail($slide_id)->update([
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'video_url' => $request->video_url,

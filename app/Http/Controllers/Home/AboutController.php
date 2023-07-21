@@ -38,14 +38,15 @@ class AboutController extends Controller
 
             $save_url = 'upload/home_about/' . $name_gen;
 
-            // Find or create the About model
-            About::firstOrCreate(['id' => $about_id], [
-                'title' => $request->title,
-                'short_title' => $request->short_title,
-                'short_description' => $request->short_description,
-                'long_description' => $request->long_description,
-                'about_image' => $save_url,
-            ]);
+            // Find or fail the About model
+            About::findOrFail($about_id)->update(
+                [
+                    'title' => $request->title,
+                    'short_title' => $request->short_title,
+                    'short_description' => $request->short_description,
+                    'long_description' => $request->long_description,
+                    'about_image' => $save_url,
+                ]);
 
             $not_succ = [
                 'message' => 'Home About and Image banner Updated Successfully',
@@ -55,8 +56,8 @@ class AboutController extends Controller
             return redirect()->back()->with($not_succ);
 
         } else { 
-            // Find or create the About model
-            About::firstOrCreate(['id' => $about_id], [
+            // Find or fail the About model
+            About::findOrFail($about_id)->update([
                 'title' => $request->title,
                 'short_title' => $request->short_title,
                 'short_description' => $request->short_description,

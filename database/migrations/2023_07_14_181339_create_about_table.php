@@ -78,10 +78,17 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Delete the default record with ID 1
-        DB::table('about')->where('id', 1)->delete();
+        Schema::table('about', function (Blueprint $table) {
+            // Drop individual columns to rollback without losing the default record
+            $table->dropColumn('title');
+            $table->dropColumn('short_title');
+            $table->dropColumn('short_description');
+            $table->dropColumn('long_description');
+            $table->dropColumn('about_image');
+        });
 
         Schema::dropIfExists('about');
     }
 };
+
 

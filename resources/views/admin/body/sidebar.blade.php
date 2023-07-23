@@ -38,9 +38,20 @@
                         <span>About Section</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('home.about')}}">About</a></li>
+                        <li><a href="{{ route('home.about')}}">Home About</a></li>
                         <li><a href="{{ route('about.multi.image')}}">About Mutli Image</a></li>
                         <li><a href="{{ route('all.multi.image')}}">All Mutli Image</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Portfolio Section</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('home.portfolio')}}">Home Portfolio</a></li>
+                        <li><a href="{{ route('home.add.portfolio')}}">Add Portfolio</a></li>
                     </ul>
                 </li>
 

@@ -78,6 +78,7 @@ class PortfolioController extends Controller
 
     }
 
+    // Edit the portfolio
     public function editPortfolio($id) {
         $editPortfolio = Portfolio::findOrFail($id);
         return view('admin.portfolio.edit_portfolio', compact('editPortfolio'));
@@ -143,6 +144,11 @@ class PortfolioController extends Controller
         ];
 
         return redirect()->back()->with($not_succ);
+    }
+
+    public function detailsPortfolio($id) {
+        $detailsPortfolio = Portfolio::findOrFail($id);
+        return view('frontend.portfolio_details', compact('detailsPortfolio'));
     }
 
 }

@@ -53,6 +53,8 @@ Route::controller(AboutController::class)->group(function () {
     Route::get('/edit/multi/image/{id}', 'editMultiImage')->name('edit.multi.image');
     Route::post('/update/multi/image', 'updateMultiImage')->name('update.multi.image');
     Route::get('/delete/multi/image/{id}', 'deleteMultiImage')->name('delete.multi.image');
+    Route::get('/home/resume/', 'homeResume')->name('home.resume');
+    Route::post('/store/resume/', 'storeResume')->name('store.resume');
 });
 
 // Home Portfolio all Route

@@ -8,7 +8,7 @@
                     <div class="menu__wrap">
                         <nav class="menu__nav">
                             <div class="logo">
-                                <a href="index.html" class="logo__black"><img src="{{asset('logo/welcome.svg')}}" alt=""></a>  
+                                <a href="/" class="logo__black"><img src="{{asset('logo/welcome.svg')}}" alt=""></a>  
                             </div>
                             <div class="navbar__wrap main__menu d-none d-md-flex">
                                 <ul class="navigation">

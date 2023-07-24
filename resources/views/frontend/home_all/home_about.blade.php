@@ -33,7 +33,8 @@
                         </div>
                     </div>
                     <p class="desc">{{$homeabout->short_description }}</p>
-                    <a href="about.html" class="btn">Download my resume</a>
+                    {{-- <a href="{{ asset('upload/resume/Evnagelos_ilias_PHP_CV.pdf') }}" class="btn" target="_blank">Download my resume</a> --}}
+                    <a href="{{ $homeabout->about_resume }}" class="btn" target="_blank">Download my resume</a>
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@ use App\Models\About;
 use App\Models\MultiImage;
 use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Response;
 
 
 class AboutController extends Controller
@@ -176,7 +177,49 @@ class AboutController extends Controller
 
     }
 
-    
+
+    public function homeResume($id = null) {
+        if ($id === null) {
+            // If no ID is provided, retrieve the latest record
+            $homeResume = About::latest()->first();
+        } else {
+            // Retrieve the specific record by ID
+            $homeResume = About::find($id);
+        }
+
+        return view('admin.home_about.home_resume', compact('homeResume'));
+
+    }
+
+    // Store the resume into database 
+    public function storeResume(Request $request)
+    {
+        // Validate the uploaded file
+        $request->validate([
+            'about_resume' => 'required|mimes:pdf|max:2048', // Adjust the maximum file size (in kilobytes) as needed
+        ]);
+
+        // Handle file upload
+        $file = $request->file('about_resume');
+        $fileName = time() . '_' . $file->getClientOriginalName();
+
+        // Move the file to the public disk (storage/app/public/resume)
+        $filePath = $file->storeAs('resume', $fileName, 'public');
+
+        // Update the database with the file name or path
+        $downloadResume = About::findOrFail($request->id); // Fetch the specific about record based on the 'id' in the request
+        $downloadResume->about_resume = $filePath; // Store the file path in the 'about_resume' column
+        $downloadResume->save();
+
+        $not_succ = [
+            'message' => 'Home Resume Updated Successfully',
+            'alert-type' => 'success',
+        ];
+
+        return redirect()->back()->with($not_succ);
+    }
+
+
 }
 
 

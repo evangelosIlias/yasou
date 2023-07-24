@@ -52,7 +52,7 @@ class PortfolioController extends Controller
             ]);
 
             $not_succ = [
-                'message' => 'Home Portfolιο and Image banner Inserted Successfully',
+                'message' => 'Home Portfolio and Image banner Inserted Successfully',
                 'alert-type' => 'success',
             ];
             

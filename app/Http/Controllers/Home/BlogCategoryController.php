@@ -31,11 +31,10 @@ class BlogCategoryController extends Controller
             'blog_category.required' => 'The blog category name is required',
         ]);
 
-        BlogCategory::insert([
+        BlogCategory::create([
             'blog_category' => $request->blog_category,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
         ]);
+        
 
         $not_succ = [
             'message' => 'Home Blog Category Inserted Successfully',
@@ -44,8 +43,5 @@ class BlogCategoryController extends Controller
         
         return redirect()->route('home.blog.category')->with($not_succ);
     }
-
-
-
 
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\Home\BlogCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,9 +67,14 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::post('/update/portfolio', 'updatePortfolio')->name('update.portfolio');
     Route::get('/delete/portfolio/{id}', 'deletePortfolio')->name('delete.portfolio');
     Route::get('/details/portfolio/{id}', 'detailsPortfolio')->name('details.portfolio');
-
 });
 
+// Home Bloge All Route
+Route::controller(BlogCategoryController::class)->group(function () {
+    Route::get('/home/blog/category', 'homeBlogCategory')->name('home.blog.category');
+    Route::get('/add/blog/category', 'addBlogCategory')->name('add.blog.category');
+    Route::post('/store/blog/category', 'storeBlogCategory')->name('store.blog.category');
+});
 
 // Profile Authedication Route
 Route::middleware('auth')->group(function () {

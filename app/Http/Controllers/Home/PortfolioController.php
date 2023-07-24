@@ -12,7 +12,6 @@ class PortfolioController extends Controller
 {
     // Return the view of portfolio
     public function homePortfolio() {
-        
         $portfolio = Portfolio::latest()->get();
         return view('admin.portfolio.home_portfolio', compact('portfolio'));
     }

@@ -19,7 +19,7 @@
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label"> </label>
                             <div class="col-sm-10">
-                                <img id="showImage" class="rounded-circle avatar-lg" src=" url('upload/no_image.svg') }}" alt="Card image cap" style="width: 200px; height: 200px; border: 5px solid rgba(138, 60, 221, 0.729);">
+                                <img id="showImage" class="rounded-circle avatar-lg" src="{{ url('upload/no_image.svg') }}" alt="Card image cap" style="width: 200px; height: 200px; border: 5px solid rgba(138, 60, 221, 0.729);">
                             </div>
                         </div>
                         {{-- {{ (!empty($portfolio->portfolio_image)) ? url($portfolio->portfolio_image) : --}}

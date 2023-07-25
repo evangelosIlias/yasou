@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">Blog Category All</h4>
+                    <h4 class="mb-sm-0">Blog All</h4>
                     {{-- <div class="page-title-right">
                         <ol class="breadcrumb m-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
@@ -24,7 +24,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Blog Category All Data</h4>
+                        <h4 class="card-title">Blog All Data</h4>
                         {{-- <p class="card-title-desc">DataTables has most features enabled by
                             default, so all you need to do to use it with your own tables is to call
                             the construction function:
@@ -34,16 +34,22 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Blog Category Name</th>
+                                <th>Blog Category ID</th>
+                                <th>Blog Title</th>
+                                <th>Blog Tags</th>
+                                <th>Blog Image</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                                 @php($i = 1)
-                                @foreach ($homeBlogCategory as $item)
+                                @foreach ($homeBlog as $item)
                             <tr>
                                 <td>{{ $i++ }}</td>
-                                <td>{{ $item->blog_category }}</td>
+                                <td>{{ $item->blog_category_id }}</td>
+                                <td>{{ $item->blog_title }}</td>
+                                <td>{{ $item->blog_tags }}</td>
+                                <td>{{ $item->blog_image }}</td>
                                 <td>
                                 <a href="{{ route('edit.blog.category', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a> 
                                 <a href="{{ route('delete.blog.category', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id='delete'><i class="fas fa-trash"></i></a>    

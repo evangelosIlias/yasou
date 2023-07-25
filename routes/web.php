@@ -7,6 +7,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
+use App\Http\Controllers\Home\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,14 +70,20 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/details/portfolio/{id}', 'detailsPortfolio')->name('details.portfolio');
 });
 
-// Home Bloge All Route
+// Home Blog Category All Route
 Route::controller(BlogCategoryController::class)->group(function () {
     Route::get('/home/blog/category', 'homeBlogCategory')->name('home.blog.category');
     Route::get('/add/blog/category', 'addBlogCategory')->name('add.blog.category');
     Route::post('/store/blog/category', 'storeBlogCategory')->name('store.blog.category');
     Route::get('/edit/blog/category/{id}', 'editBlogCategory')->name('edit.blog.category');
-    Route::post('/update/blog/category', 'updateBlogCategory')->name('update.blog.category');
+    Route::post('/update/blog/category/{id}', 'updateBlogCategory')->name('update.blog.category');
     Route::get('/delete/blog/category/{id}', 'deleteBlogCategory')->name('delete.blog.category');
+});
+
+// Home Blog All Route
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/home/blog', 'homeBlog')->name('home.blog');
+    Route::get('/add/blog', 'addBlog')->name('add.blog');
 });
 
 

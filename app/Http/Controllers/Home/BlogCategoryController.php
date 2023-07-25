@@ -51,11 +51,9 @@ class BlogCategoryController extends Controller
     }
 
     // Update the blog category and database
-    public function updateBlogCategory(Request $request) {
+    public function updateBlogCategory(Request $request, $id) {
 
-        $updateBlogCategory = $request->id;
-
-        BlogCategory::findOrFail($updateBlogCategory)->update([
+        BlogCategory::findOrFail($id)->update([
             'blog_category' => $request->blog_category,
         ]);
 

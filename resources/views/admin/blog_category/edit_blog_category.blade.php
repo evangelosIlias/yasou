@@ -12,10 +12,8 @@
                     <div class="card-body">
                         <h4 class="card-title">Blog Category Edit Page </h4><br><br>
             
-                        <form method="post" action="{{ route('update.blog.category') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('update.blog.category', $editBlogCategory->id) }}" enctype="multipart/form-data">
                             @csrf
-
-                        <input type="hidden" name="id" value="{{ $editBlogCategory->id}}">    
 
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">Blog Category</label>

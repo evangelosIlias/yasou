@@ -16,13 +16,13 @@ class BlogCategoryController extends Controller
         return view('admin.blog_category.home_blog_category', compact('homeBlogCategory'));
     }
 
-    // Add the blog category view 
+    // Add the blog category and return the view 
     public function addBlogCategory() {
         return view('admin.blog_category.add_blog_category');
 
     }
 
-    // Insert the blog category into database
+    // Create the blog category into database
     public function storeBlogCategory(Request $request){
 
         $request->validate([
@@ -41,6 +41,43 @@ class BlogCategoryController extends Controller
             'alert-type' => 'success',
         ];
         
+        return redirect()->route('home.blog.category')->with($not_succ);
+    }
+
+    // Edit the blog category
+    public function editBlogCategory($id) {
+        $editBlogCategory = BlogCategory::findOrFail($id);
+        return view('admin.blog_category.edit_blog_category', compact('editBlogCategory'));
+    }
+
+    // Update the blog category and database
+    public function updateBlogCategory(Request $request) {
+
+        $updateBlogCategory = $request->id;
+
+        BlogCategory::findOrFail($updateBlogCategory)->update([
+            'blog_category' => $request->blog_category,
+        ]);
+
+        $not_succ = [
+            'message' => 'Blog Category Updated Successfully',
+            'alert-type' => 'success',
+        ];
+        
+        return redirect()->route('home.blog.category')->with($not_succ);
+
+    }
+
+    // Delete the blog category
+    public function deleteBlogCategory($id) {
+
+        BlogCategory::findOrFail($id)->delete();
+
+        $not_succ = [
+            'message' => 'Blog Category Deleted Successfully',
+            'alert-type' => 'success',
+        ];
+
         return redirect()->route('home.blog.category')->with($not_succ);
     }
 

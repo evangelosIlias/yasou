@@ -41,13 +41,11 @@ class PortfolioController extends Controller
 
             $save_url = 'upload/portfolio/' . $name_gen;
 
-            Portfolio::insert([
+            Portfolio::create([
                 'portfolio_name' => $request->portfolio_name,
                 'portfolio_title' => $request->portfolio_title,
                 'portfolio_image' => $save_url,
                 'portfolio_description' => $request->portfolio_description,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
 
             ]);
 
@@ -60,7 +58,7 @@ class PortfolioController extends Controller
 
         } else { 
 
-            Portfolio::insert([
+            Portfolio::create([
                 'portfolio_name' => $request->portfolio_name,
                 'portfolio_title' => $request->portfolio_title,
                 'portfolio_description' => $request->portfolio_description,

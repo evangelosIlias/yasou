@@ -177,7 +177,7 @@ class AboutController extends Controller
 
     }
 
-
+    // Find the latest first id if is null
     public function homeResume($id = null) {
         if ($id === null) {
             // If no ID is provided, retrieve the latest record

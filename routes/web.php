@@ -74,7 +74,11 @@ Route::controller(BlogCategoryController::class)->group(function () {
     Route::get('/home/blog/category', 'homeBlogCategory')->name('home.blog.category');
     Route::get('/add/blog/category', 'addBlogCategory')->name('add.blog.category');
     Route::post('/store/blog/category', 'storeBlogCategory')->name('store.blog.category');
+    Route::get('/edit/blog/category/{id}', 'editBlogCategory')->name('edit.blog.category');
+    Route::post('/update/blog/category', 'updateBlogCategory')->name('update.blog.category');
+    Route::get('/delete/blog/category/{id}', 'deleteBlogCategory')->name('delete.blog.category');
 });
+
 
 // Profile Authedication Route
 Route::middleware('auth')->group(function () {

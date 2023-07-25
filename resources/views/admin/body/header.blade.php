@@ -6,7 +6,10 @@ $adminData = App\Models\User::find($id);
 @endphp
 
 <header id="page-topbar">
+
+    <!-- Starts navbar-header -->
     <div class="navbar-header">
+        <!-- Starts d-flex -->
         <div class="d-flex">
 
             <!-- LOGO -->
@@ -42,17 +45,16 @@ $adminData = App\Models\User::find($id);
                     <span class="ri-search-line"></span>
                 </div>
             </form>
-
         </div>
+        <!-- End d-flex -->
 
+        <!-- Starts d-flex -->
         <div class="d-flex">
-
             <div class="dropdown d-none d-lg-inline-block ms-1">
                 <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
                     <i class="ri-fullscreen-line"></i>
                 </button>
             </div>
-
             <div class="dropdown d-inline-block user-dropdown">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,7 +74,8 @@ $adminData = App\Models\User::find($id);
                     <a class="dropdown-item text-danger" href="{{ route('admin.logout')}}"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                 </div>
             </div>
-
         </div>
+        <!-- End d-flex -->
     </div>
+    <!-- Ends navbar-header -->
 </header>

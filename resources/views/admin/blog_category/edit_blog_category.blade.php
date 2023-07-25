@@ -30,10 +30,12 @@
                         </form>
                     </div>
                 </div>
-
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- End Section -->
 @endsection
 
 

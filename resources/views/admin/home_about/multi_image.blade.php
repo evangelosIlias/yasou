@@ -35,10 +35,12 @@
                         </form>
                     </div>
                 </div>
-
+            </div>
+        </div>
     </div>
 </div>
 
+{{-- Js --}}
 <script type="text/javascript">
     $(document).ready(function() {
         $('#mutli_image').change(function(e) {
@@ -51,4 +53,5 @@
     });
 </script>
 
+<!-- End Section -->
 @endsection

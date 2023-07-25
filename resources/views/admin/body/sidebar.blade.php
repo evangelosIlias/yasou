@@ -2,13 +2,14 @@
 <!-- Start Left Sidebar Start  -->
 <!-- ============================================================== -->
 
+<!-- Starts vertical-menu -->
 <div class="vertical-menu">
 
     <div data-simplebar class="h-100">
 
         <!-- User details -->
 
-        <!--- Sidemenu -->
+        <!--- Starts Sidemenu -->
         <div id="sidebar-menu">
             
             <!-- Left Menu Start -->
@@ -21,7 +22,6 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-    
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -31,7 +31,6 @@
                         <li><a href="{{ route('home.slide')}}">Home Slide</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -43,7 +42,6 @@
                         <li><a href="{{ route('all.multi.image')}}">All Mutli Image</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -53,7 +51,6 @@
                         <li><a href="{{ route('home.resume')}}">Home Resume</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
@@ -82,7 +79,6 @@
                                 <li><a href="layouts-colored-sidebar.html">Colored Sidebar</a></li>
                             </ul>
                         </li>
-
                         <li>
                             <a href="javascript: void(0);" class="has-arrow">Horizontal</a>
                             <ul class="sub-menu" aria-expanded="true">
@@ -95,7 +91,6 @@
                         </li>
                     </ul>
                 </li> --}}
-
                 <li class="menu-title">Pages</li>
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
@@ -119,7 +114,7 @@
                 </li>
             </ul>
         </div>
-        <!-- Sidebar -->
+       <!--- Starts Sidemenu -->
     </div>
 </div>
-<!-- Left Sidebar End -->
+<!-- Starts vertical-menu -->

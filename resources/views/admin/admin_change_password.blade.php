@@ -1,8 +1,11 @@
 @extends('admin.admin_master')
 @section('admin')
 
+<!-- Starts page-content --> 
 <div class="page-content">
+    <!-- Starts ontainer-fluid --> 
     <div class="container-fluid">
+
         {{-- Form start --}}
         <div class="row">
             <div class="col-12">
@@ -48,9 +51,12 @@
                         </form>
                     </div>
                 </div>
-
+            </div>
+        </div>
     </div>
+    <!-- Ends ontainer-fluid --> 
 </div>
+<!-- Ends page-content--> 
 
-
+<!-- End Section -->  
 @endsection

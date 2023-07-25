@@ -37,9 +37,12 @@
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
     </div>
 </div>
 
+{{-- JS --}}
 <script type="text/javascript">
     $(document).ready(function() {
         $('#multi_image').change(function(e) {
@@ -52,4 +55,5 @@
     });
 </script>
 
+<!-- End Section -->
 @endsection

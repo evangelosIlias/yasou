@@ -36,6 +36,7 @@
     </div>
 </div>
 
+{{-- JS --}}
 <script type="text/javascript">
     $(document).ready(function () {
         $('#about_resume').change(function (e) {
@@ -45,4 +46,5 @@
     });
 </script>
 
+<!-- End Section -->
 @endsection

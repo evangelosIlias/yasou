@@ -1,7 +1,6 @@
 @extends('admin.admin_master')
 @section('admin')
 
-
 <div class="page-content">
     <div class="container-fluid">
 
@@ -34,7 +33,6 @@
                             the construction function:
                             {{-- <code>$().DataTable();</code>
                         </p> --}}
-
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                             <thead>
                             <tr>
@@ -61,15 +59,14 @@
                                 @endforeach
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div> <!-- end col -->
         </div> <!-- end row -->
-        
     </div> <!-- container-fluid -->
 </div>
 <!-- End Page-content -->
 
+<!-- End Section -->
 @endsection
 

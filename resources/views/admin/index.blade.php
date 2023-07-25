@@ -234,19 +234,18 @@
                                         </td>
                                         <td>$55,100</td>
                                     </tr>
-                                        <!-- end -->
                                 </tbody><!-- end tbody -->
                             </table> <!-- end table -->
                         </div>
                     </div><!-- end card -->
                 </div><!-- end card -->
-            </div>
-            <!-- end col -->  
-        </div>
-        <!-- end row -->
-    </div>
-    
+            </div><!-- end col -->  
+        </div><!-- end row -->
+    </div> 
+</div>
+<!-- End container-fluid -->
 </div>
 <!-- End Page-content -->
 
+<!-- End Page-content -->
 @endsection

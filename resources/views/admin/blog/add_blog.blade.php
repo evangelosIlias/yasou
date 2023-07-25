@@ -10,7 +10,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Add   Blog Page </h4>
+                        <h4 class="card-title">Add Blog Page </h4>
                         
                         {{-- Form Section Starts Here --}}
                         <form method="post" action="{{ route('store.portfolio')}}" enctype="multipart/form-data">
@@ -86,7 +86,9 @@
                         </form>
                     </div>
                 </div>
+            </div>
         </div>
+    </div>
 </div>
 
 {{-- Adding Style for tags input --}}

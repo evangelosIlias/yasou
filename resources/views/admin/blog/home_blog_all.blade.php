@@ -61,8 +61,7 @@
                     </div>
                 </div>
             </div> <!-- end col -->
-        </div> <!-- end row -->
-        
+        </div> <!-- end row --> 
     </div> <!-- container-fluid -->
 </div>
 <!-- End Page-content -->

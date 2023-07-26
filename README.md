@@ -22,9 +22,8 @@ Portfolio details
 
 ![](test_images/example_1.png)
 
+More images will be added soon with explanation, now I'm working on Blog, Categories, Contact me, Footer.
 
-More sectors and ideas will be added soon.
-The login and register areas are already done, the next step will be some authentication requests and forgotten passwords,s, etc. Once is done the process will be focused on the GIS sector and Admin panel for manipulation posts etc.
 
 
 

@@ -84,8 +84,11 @@ Route::controller(BlogCategoryController::class)->group(function () {
 Route::controller(BlogController::class)->group(function () {
     Route::get('/home/blog', 'homeBlog')->name('home.blog');
     Route::get('/add/blog', 'addBlog')->name('add.blog');
+    Route::post('/store/blog', 'storeBlog')->name('store.blog');
+    Route::get('/edit/blog/{id}', 'editBlog')->name('edit.blog');
+    Route::post('/update/blog/{id}', 'updateBlog')->name('update.blog');
+    Route::get('/delete/blog/{id}', 'deleteBlog')->name('delete.blog');
 });
-
 
 // Profile Authedication Route
 Route::middleware('auth')->group(function () {

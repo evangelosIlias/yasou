@@ -34,7 +34,7 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Blog Category ID</th>
+                                <th>Blog Category</th>
                                 <th>Blog Title</th>
                                 <th>Blog Tags</th>
                                 <th>Blog Image</th>
@@ -46,13 +46,14 @@
                                 @foreach ($homeBlog as $item)
                             <tr>
                                 <td>{{ $i++ }}</td>
-                                <td>{{ $item->blog_category_id }}</td>
+                                {{-- This category coming from Model::Blog creating relationship with Model::BlogCategory --}}
+                                <td>{{ $item['category']['blog_category'] }}</td>
                                 <td>{{ $item->blog_title }}</td>
                                 <td>{{ $item->blog_tags }}</td>
-                                <td>{{ $item->blog_image }}</td>
+                                <td><img src="{{ asset($item->blog_image) }}" style="width: 60px; height: 60px;"></td>
                                 <td>
-                                <a href="{{ route('edit.blog.category', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a> 
-                                <a href="{{ route('delete.blog.category', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id='delete'><i class="fas fa-trash"></i></a>    
+                                <a href="{{ route('edit.blog', $item->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a> 
+                                <a href="{{ route('delete.blog', $item->id) }}" class="btn btn-danger sm" title="Delete Data" id='delete'><i class="fas fa-trash"></i></a>    
                                 </td>
                             </tr>
                                 @endforeach

@@ -88,6 +88,7 @@ Route::controller(BlogController::class)->group(function () {
     Route::get('/edit/blog/{id}', 'editBlog')->name('edit.blog');
     Route::post('/update/blog/{id}', 'updateBlog')->name('update.blog');
     Route::get('/delete/blog/{id}', 'deleteBlog')->name('delete.blog');
+    Route::get('/blog/details/{id}', 'blogDetails')->name('blog.details');
 });
 
 // Profile Authedication Route

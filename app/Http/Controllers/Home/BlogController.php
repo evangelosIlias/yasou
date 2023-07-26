@@ -144,4 +144,15 @@ class BlogController extends Controller
 
         return redirect()->back()->with($not_succ);
     }
+
+    // Blog details for the frontend
+    public function blogDetails($id) {
+
+        $blogDetails = Blog::findOrFail($id);
+        return view('frontend.blog_details', compact('blogDetails'));
+    }
+
+
+
+
 }

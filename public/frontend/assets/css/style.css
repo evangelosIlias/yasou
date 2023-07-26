@@ -3949,7 +3949,7 @@ Breadcrumb
   .blog__post__item {
     margin-bottom: 30px; }
     .blog__post__item:hover .blog__post__content .title a {
-      color: #0054FF;
+      color: #FF0077;
       background-size: 0 2px, 100% 2px; }
   .blog__post__thumb {
     position: relative; }
@@ -3984,7 +3984,7 @@ Breadcrumb
     .blog__post__content .date {
       display: block;
       text-transform: uppercase;
-      color: #FCAF17;
+      color: #FF0077;
       font-weight: 700;
       letter-spacing: 0.1em;
       font-size: 15px;
@@ -4001,7 +4001,8 @@ Breadcrumb
       .blog__post__content .title a {
         position: relative;
         display: inline;
-        background-image: linear-gradient(#0054FF, #0054FF), linear-gradient(#0054FF, #0054FF);
+        background-image: linear-gradient(142.4deg, rgb(139, 98, 208) 5%, rgb(126, 124, 223) 28.2%, rgb(109, 207, 236) 62.5%, rgb(176, 239, 244) 89.1%);
+        /* background-image: linear-gradient(#0054FF, #0054FF), linear-gradient(#0054FF, #0054FF); */
         background-size: 0% 1px, 0 1px;
         background-position: 100% 100%, 0 100%;
         background-repeat: no-repeat;
@@ -4021,7 +4022,7 @@ Breadcrumb
         font-weight: 700;
         margin-left: 8px; }
       .blog__post__content .read__more:hover {
-        color: #0054FF; }
+        color: #FF0077; }
   .blog .row.gx-0 [class*="col-"]:not(:first-child) .blog__post__item {
     margin-left: -2px; }
   .blog__button {

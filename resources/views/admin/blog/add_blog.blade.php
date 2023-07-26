@@ -68,11 +68,10 @@
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">Blog Description</label>
                             <div class="col-sm-10">
-                                <textarea name="blog_description" class="form-control" rows="7"></textarea>
+                                <textarea id="elm1" name="blog_description" class="form-control" rows="7"></textarea>
                             </div>
                         </div>
                         <!-- end row -->
-
                         {{-- Show the Blog Image --}}
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">Blog Image</label>

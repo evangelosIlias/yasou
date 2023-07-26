@@ -18,6 +18,8 @@ About me
 
 ![](test_images/example_2.png)
 
+Portfolio details 
+
 ![](test_images/example_1.png)
 
 

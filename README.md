@@ -14,6 +14,8 @@ About area
 
 ![](test_images/example_3.png)
 
+About me
+
 ![](test_images/example_2.png)
 
 ![](test_images/example_1.png)

@@ -4,12 +4,17 @@
 
 Creating a personal portfolio based on the Laravel framework. The philosophy behind this project is to 
 
-The website uses mainly Laravel 10x including Html and CSS and JavaScript, jQuery for the most frontend functionality
+The website uses mainly Laravel 10x including Html and CSS and JavaScript, jQuery for the most frontend functionality and MySQL database
 
 Main area
 
 ![](test_images/example_4.png)
 
+![](test_images/example_3.png)
+
+![](test_images/example_2.png)
+
+![](test_images/example_1.png)
 
 
 More sectors and ideas will be added soon.

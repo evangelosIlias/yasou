@@ -8,7 +8,7 @@ The website uses mainly Laravel 10x including Html and CSS and JavaScript, jQuer
 
 Main area
 
-![](public/example_images/example_1)
+![](example_1)
 
 
 More sectors and ideas will be added soon.

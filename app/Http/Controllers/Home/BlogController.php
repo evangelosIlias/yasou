@@ -147,11 +147,27 @@ class BlogController extends Controller
 
     // Blog details for the frontend
     public function blogDetails($id) {
-
+        $categories = BlogCategory::orderBy('blog_category', 'asc')->get();
+        $allBlog = Blog::latest()->limit(5)->get();
         $blogDetails = Blog::findOrFail($id);
-        return view('frontend.blog_details', compact('blogDetails'));
+        return view('frontend.blog_details', compact('blogDetails', 'allBlog', 'categories'));
     }
 
+    // Creating the new category blog page
+    public function categoryBlog($id) {
+        $categories = BlogCategory::orderBy('blog_category', 'asc')->get();
+        $allBlog = Blog::latest()->limit(5)->get();
+        $categoryBlog = Blog::where('blog_category_id', $id)->orderBy('id', 'desc')->get();
+        $categoryName = BlogCategory::findOrFail($id);
+        return view('frontend.cat_blog_details', compact('categoryBlog', 'allBlog', 'categories', 'categoryName'));
+    }
+
+    // Blog page 
+    public function blogPage() {
+        $blogPage = Blog::latest()->get();
+        $categories = BlogCategory::orderBy('blog_category', 'asc')->get();
+        return view('frontend.blog_page', compact('blogPage', 'categories'));
+    }
 
 
 

@@ -38,7 +38,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('home.about')}}">Home About</a></li>
-                        <li><a href="{{ route('about.multi.image')}}">About Mutli Image</a></li>
+                        <li><a href="{{ route('about.multi.image')}}">Add Mutli Image</a></li>
                         <li><a href="{{ route('all.multi.image')}}">All Mutli Image</a></li>
                     </ul>
                 </li>
@@ -61,7 +61,6 @@
                         <li><a href="{{ route('home.add.portfolio')}}">Add Portfolio</a></li>
                     </ul>
                 </li>
-
                 {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-layout-3-line"></i>
@@ -110,6 +109,15 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('home.blog') }}">All Blog</a></li>
                         <li><a href="{{ route('add.blog')}}">Add Blog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-profile-line"></i>
+                        <span>Footer Sector</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('home.footer') }}">Footer</a></li>
                     </ul>
                 </li>
             </ul>

@@ -35,11 +35,7 @@
                    <div class="footer__widget__social">
                        <p>Lorem ipsum dolor sit amet enim. <br> Etiam ullamcorper.</p>
                        <ul class="footer__social__list">
-                           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                           <li><a href="#"><i class="fab fa-behance"></i></a></li>
                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                        </ul>
                    </div>
                </div>

@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8 col-md-10">
                     <div class="breadcrumb__wrap__content">
-                        <h2 class="title">Single Article</h2>
+                        <h2 class="title">{{ $blogDetails->blog_title}}</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -44,20 +44,19 @@
                         <div class="blog__details__content services__details__content">
                             <ul class="blog__post__meta">
                                 <li><i class="fal fa-calendar-alt"></i>{{ Carbon\Carbon::parse($blogDetails->created_at)->diffForHumans() }}</li>
-                                <li><i class="fal fa-comments-alt"></i> <a href="#">Comment (08)</a></li>
-                                <li class="post-share"><a href="#"><i class="fal fa-share-all"></i> (18)</a></li>
+                                {{-- <li><i class="fal fa-comments-alt"></i> <a href="#">Comment (08)</a></li>
+                                <li class="post-share"><a href="#"><i class="fal fa-share-all"></i> (18)</a></li> --}}
                             </ul>
                             <h2 class="title">{{ $blogDetails->blog_title }}</h2>
                             <p>{!! $blogDetails->blog_description !!}</p>
                         </div>
+
+                        {{-- Starts Tags --}}
                         <div class="blog__details__bottom">
                             <ul class="blog__details__tag">
                                 <li class="title">Tag:</li>
                                 <li class="tags-list">
-                                    <a href="#">Business</a>
-                                    <a href="#">Design</a>
-                                    <a href="#">apps</a>
-                                    <a href="#">data</a>
+                                    <a href="#">{{$blogDetails->blog_tags}}</a>
                                 </li>
                             </ul>
                             <ul class="blog__details__social">
@@ -70,6 +69,8 @@
                                 </li>
                             </ul>
                         </div>
+                        {{-- Ends Tags --}}
+                        
                         <div class="blog__next__prev">
                             <div class="row justify-content-between">
                                 <div class="col-xl-5 col-md-6">
@@ -205,73 +206,39 @@
                                 <button type="submit"><i class="fal fa-search"></i></button>
                             </form>
                         </div>
+
+                        {{-- Start Recent Blogs --}}
                         <div class="widget">
                             <h4 class="widget-title">Recent Blog</h4>
                             <ul class="rc__post">
+                                {{-- Starts Foreach --}}
+                                @foreach($allBlog as $allBlogs) 
                                 <li class="rc__post__item">
                                     <div class="rc__post__thumb">
-                                        <a href="blog-details.html"><img src="assets/img/blog/rc_thumb01.jpg" alt=""></a>
+                                        <a href="blog-details.html"><img src="{{asset($allBlogs->blog_image)}}" alt=""></a>
                                     </div>
                                     <div class="rc__post__content">
-                                        <h5 class="title"><a href="blog-details.html">Best website traffick booster with
-                                        great tools.</a></h5>
-                                        <span class="post-date"><i class="fal fa-calendar-alt"></i> 28 january 2021</span>
+                                        <h5 class="title"><a href="blog-details.html">{{ $allBlogs->blog_title }}</a></h5>
+                                        <span class="post-date"><i class="fal fa-calendar-alt"></i>{{ Carbon\Carbon::parse($allBlogs->created_at)->diffForHumans() }}</span>
                                     </div>
                                 </li>
-                                <li class="rc__post__item">
-                                    <div class="rc__post__thumb">
-                                        <a href="blog-details.html"><img src="assets/img/blog/rc_thumb02.jpg" alt=""></a>
-                                    </div>
-                                    <div class="rc__post__content">
-                                        <h5 class="title"><a href="blog-details.html">How to become a best sale marketer
-                                        in a year!</a></h5>
-                                        <span class="post-date"><i class="fal fa-calendar-alt"></i> 28 january 2021</span>
-                                    </div>
-                                </li>
-                                <li class="rc__post__item">
-                                    <div class="rc__post__thumb">
-                                        <a href="blog-details.html"><img src="assets/img/blog/rc_thumb03.jpg" alt=""></a>
-                                    </div>
-                                    <div class="rc__post__content">
-                                        <h5 class="title"><a href="blog-details.html">Google take latest step & catch the
-                                        black SEO</a></h5>
-                                        <span class="post-date"><i class="fal fa-calendar-alt"></i> 28 january 2021</span>
-                                    </div>
-                                </li>
-                                <li class="rc__post__item">
-                                    <div class="rc__post__thumb">
-                                        <a href="blog-details.html"><img src="assets/img/blog/rc_thumb04.jpg" alt=""></a>
-                                    </div>
-                                    <div class="rc__post__content">
-                                        <h5 class="title"><a href="blog-details.html">Businesses are thriving societies. Time for urgent change</a></h5>
-                                        <span class="post-date"><i class="fal fa-calendar-alt"></i> 28 january 2021</span>
-                                    </div>
-                                </li>
-                                <li class="rc__post__item">
-                                    <div class="rc__post__thumb">
-                                        <a href="blog-details.html"><img src="assets/img/blog/rc_thumb05.jpg" alt=""></a>
-                                    </div>
-                                    <div class="rc__post__content">
-                                        <h5 class="title"><a href="blog-details.html">TikTok influencer marketing:How to
-                                        work with influencer</a></h5>
-                                        <span class="post-date"><i class="fal fa-calendar-alt"></i> 28 january 2021</span>
-                                    </div>
-                                </li>
+                                @endforeach
+                                 {{-- Ends Foreach --}}
                             </ul>
                         </div>
+                        {{-- End Recent Blogs --}}
+
+                        {{-- Starts Categories --}}
                         <div class="widget">
                             <h4 class="widget-title">Categories</h4>
                             <ul class="sidebar__cat">
-                                <li class="sidebar__cat__item"><a href="blog.html">Web Design (6)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Web Development (4)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Product Design (9)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Animation (6)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Ui/Ux Design (8)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Branding Design (12)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Web Design (6)</a></li>
-                                <li class="sidebar__cat__item"><a href="blog.html">Logo Design (6)</a></li>
+                                @foreach($categories as $cat)
+                                <li class="sidebar__cat__item"><a href="{{ route('category.blog', $cat->id) }}">{{ $cat->blog_category}}</a></li>
+                                @endforeach
                             </ul>
                         </div>
+                        {{-- End Categories --}}
+
                         <div class="widget">
                             <h4 class="widget-title">Recent Comment</h4>
                             <ul class="sidebar__comment">

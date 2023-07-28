@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
+use App\Http\Controllers\Home\FooterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +90,14 @@ Route::controller(BlogController::class)->group(function () {
     Route::post('/update/blog/{id}', 'updateBlog')->name('update.blog');
     Route::get('/delete/blog/{id}', 'deleteBlog')->name('delete.blog');
     Route::get('/blog/details/{id}', 'blogDetails')->name('blog.details');
+    Route::get('/category/blog/{id}', 'categoryBlog')->name('category.blog');
+    Route::get('/blog', 'blogPage')->name('blog');
+});
+
+// Home Footer All Route
+Route::controller(FooterController::class)->group(function () {
+    Route::get('/home/footer', 'homeFooter')->name('home.footer');
+    Route::post('/update/footer', 'updateFooter')->name('update.footer');
 });
 
 // Profile Authedication Route

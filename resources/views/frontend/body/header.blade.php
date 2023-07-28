@@ -1,3 +1,6 @@
+@php
+$route = Route::current()->getName();    
+@endphp
 
 <header>
     <div id="sticky-header" class="menu__area transparent-header">

@@ -1,6 +1,10 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+Blog Page | Portfolio
+@endsection
+
 <main>
     <!-- breadcrumb-area -->
     <section class="breadcrumb__wrap">
@@ -37,6 +41,7 @@
     <section class="standard__blog">
         <div class="container">
             <div class="row">
+                {{-- Starts col-lg-8 --}}
                 <div class="col-lg-8">
                     {{-- Starts Category Blog --}}
                     @foreach($blogPage as $item)
@@ -62,14 +67,13 @@
                     @endforeach
                     {{-- Ends Category Blog  --}}
 
+                    {{-- Starts Pagination --}}
                     <div class="pagination-wrap">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href=""><i class="far fa-long-arrow-left"></i></a></li>
-                            </ul>
-                        </nav>
+                       {{ $blogPage->links('vendor.pagination.custom_pagination') }}
                     </div>
+                    {{-- Ends Pagination --}}
                 </div>
+                {{-- Ends col-lg-8 --}}
                 <div class="col-lg-4">
                     <aside class="blog__sidebar">
                         <div class="widget">

@@ -15,7 +15,7 @@
                                     <li class="active"><a href="{{ url('/')}}">Home</a></li>
                                     <li><a href="{{ route('about.page')}}">About</a></li>
                                     {{-- <li><a href="services-details.html">Services</a></li> --}}
-                                    <li class="menu-item-has-children"><a href="#">Portfolio</a>
+                                    <li class="menu-item-has-children"><a href="{{ route('portfolio.page') }}">Portfolio</a>
                                     </li>
                                     <li class="menu-item-has-children"><a href="{{ route('blog') }}">Blog</a>
                                     </li>
@@ -23,7 +23,7 @@
                                 </ul>
                             </div>
                             <div class="header__btn d-none d-md-block">
-                                <a href="contact.html" class="btn">Contact me</a>
+                                <a href="{{ route('contact')}}" class="btn">Contact me</a>
                             </div>
                         </nav>
                     </div>

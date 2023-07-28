@@ -9,6 +9,7 @@ use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
+use App\Http\Controllers\Home\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +70,7 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::post('/update/portfolio', 'updatePortfolio')->name('update.portfolio');
     Route::get('/delete/portfolio/{id}', 'deletePortfolio')->name('delete.portfolio');
     Route::get('/details/portfolio/{id}', 'detailsPortfolio')->name('details.portfolio');
+    Route::get('/portfolio', 'portfolioPage')->name('portfolio.page');
 });
 
 // Home Blog Category All Route
@@ -98,6 +100,14 @@ Route::controller(BlogController::class)->group(function () {
 Route::controller(FooterController::class)->group(function () {
     Route::get('/home/footer', 'homeFooter')->name('home.footer');
     Route::post('/update/footer', 'updateFooter')->name('update.footer');
+});
+
+// Home Contact All Route
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'contactPage')->name('contact');
+    Route::post('/store/message', 'storeMessage')->name('store.message');
+    Route::get('/contact/message', 'contactMessage')->name('contact.message');
+    Route::get('/delete/contact/message/{id}', 'deleteContactMessage')->name('delete.contact.message');
 });
 
 // Profile Authedication Route

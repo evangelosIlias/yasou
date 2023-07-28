@@ -1,3 +1,9 @@
+@php 
+
+  $homeFooter = App\Models\Footer::latest()->first();
+
+@endphp
+
 <footer class="footer">
    <div class="container">
        <div class="row justify-content-between">
@@ -5,12 +11,10 @@
                <div class="footer__widget">
                    <div class="fw-title">
                        <h5 class="sub-title">Contact us</h5>
-                       <h4 class="title">+81383 766 284</h4>
+                       <h4 class="title">{{ $homeFooter->footer_number }}</h4>
                    </div>
                    <div class="footer__widget__text">
-                       <p>There are many variations of passages of lorem ipsum
-                       available but the majority have suffered alteration
-                       in some form is also here.</p>
+                       <p>{{ $homeFooter->footer_short_description }}</p>
                    </div>
                </div>
            </div>
@@ -18,11 +22,11 @@
                <div class="footer__widget">
                    <div class="fw-title">
                        <h5 class="sub-title">my address</h5>
-                       <h4 class="title">AUSTRALIA</h4>
+                       <h4 class="title">Leeds</h4>
                    </div>
                    <div class="footer__widget__address">
-                       <p>Level 13, 2 Elizabeth Steereyt set <br> Melbourne, Victoria 3000</p>
-                       <a href="mailto:noreply@envato.com" class="mail">noreply@envato.com</a>
+                       <p>{{ $homeFooter->footer_address }}</p>
+                       <a href="mailto:{{ $homeFooter->footer_email }}" class="mail">{{ $homeFooter->footer_email }}</a>
                    </div>
                </div>
            </div>
@@ -35,20 +39,25 @@
                    <div class="footer__widget__social">
                        <p>Lorem ipsum dolor sit amet enim. <br> Etiam ullamcorper.</p>
                        <ul class="footer__social__list">
-                           <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                           <li><a href="{{ $homeFooter->footer_linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
                        </ul>
                    </div>
                </div>
            </div>
        </div>
        <div class="copyright__wrap">
-           <div class="row">
-               <div class="col-12">
-                   <div class="copyright__text text-center">
-                       <p>Copyright @ 2023 All right Reserved</p>
-                   </div>
-               </div>
-           </div>
-       </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="copyright__text text-center">
+                    <p>
+                        <a target="_blank">
+                            {{ $homeFooter->footer_copyright }}
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
    </div>
 </footer>

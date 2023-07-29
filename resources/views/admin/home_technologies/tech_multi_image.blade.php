@@ -11,29 +11,27 @@
                 <div class="card">
                     <div class="card-body">
             
-                        <h4 class="card-title">Update Multi Image </h4>
+                        <h4 class="card-title">Add Tech Multi Image </h4>
             
-                        <form method="post" action="{{ route('update.multi.image') }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ route('store.tech.multi.image') }}" enctype="multipart/form-data">
                             @csrf
-
-                        <input type="hidden" name="id" value="{{ $editMultiImage->id}}">
 
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label"> </label>
                             <div class="col-sm-10">
-                                <img id="showImage" class="rounded-circle avatar-lg" src="{{ asset($editMultiImage->multi_image) }}" alt="Card image cap" style="width: 200px; height: 200px; border: 5px solid rgba(138, 60, 221, 0.729);">
+                                <img id="showImage" class="rounded-circle avatar-lg" src="{{ url('upload/no_image.svg') }}" alt="Card image cap" style="width: 200px; height: 200px; border: 5px solid rgba(138, 60, 221, 0.729);">
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="example-text-input" class="col-sm-2 col-form-label">About Multi Image </label>
+                            <label for="example-text-input" class="col-sm-2 col-form-label">Technologies Multi Image </label>
                             <div class="col-sm-10">
-                                <input name="multi_image" class="form-control" type="file"  id="image">
+                                <input name="tech_multi_image[]" class="form-control" type="file"  id="image" multiple="">
                             </div>
                         </div>
                         <!-- end row -->
             
-                        <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Multi Image">
+                        <input type="submit" class="btn btn-info waves-effect waves-light" value="Add Tech Multi Image">
                         </form>
                     </div>
                 </div>
@@ -42,7 +40,7 @@
     </div>
 </div>
 
-{{-- JS --}}
+{{-- Js --}}
 <script type="text/javascript">
     $(document).ready(function() {
         $('#image').change(function(e) {

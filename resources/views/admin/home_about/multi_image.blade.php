@@ -26,7 +26,7 @@
                         <div class="row mb-3">
                             <label for="example-text-input" class="col-sm-2 col-form-label">About Multi Image </label>
                             <div class="col-sm-10">
-                                <input name="mutli_image[]" class="form-control" type="file"  id="mutli_image" multiple="">
+                                <input name="multi_image[]" class="form-control" type="file"  id="image" multiple="">
                             </div>
                         </div>
                         <!-- end row -->
@@ -43,7 +43,7 @@
 {{-- Js --}}
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#mutli_image').change(function(e) {
+        $('#image').change(function(e) {
             var reader = new FileReader();
             reader.onload = function(e) {
                 $('#showImage').attr('src', e.target.result);

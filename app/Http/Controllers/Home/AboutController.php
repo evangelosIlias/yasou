@@ -88,14 +88,14 @@ class AboutController extends Controller
     // Creeating the multi image method
     public function storeMutliImage(Request $request)
     {
-        $images = $request->file('mutli_image');
+        $images = $request->file('multi_image');
 
         foreach ($images as $image) {
         $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
 
-        Image::make($image)->resize(220, 220)->save('upload/multi_images_loc/' . $name_gen);
+        Image::make($image)->resize(220, 220)->save('upload/about_multi_images/' . $name_gen);
 
-        $save_url = 'upload/multi_images_loc/' . $name_gen;
+        $save_url = 'upload/about_multi_images/' . $name_gen;
 
         $multiImage = new MultiImage();
         $multiImage->multi_image = $save_url;
@@ -116,8 +116,8 @@ class AboutController extends Controller
 
     }
 
-     // Edit the mutli image
-     public function editMultiImage($id){
+    // Edit the mutli image
+    public function editMultiImage($id){
         $editMultiImage = MultiImage::findOrFail($id);
         return view('admin.home_about.edit_multi_image', compact('editMultiImage'));
         
@@ -132,9 +132,9 @@ class AboutController extends Controller
             $image = $request->file('multi_image');
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
     
-            Image::make($image)->resize(220, 220)->save('upload/multi_images_loc/' . $name_gen);
+            Image::make($image)->resize(220, 220)->save('upload/about_multi_images/' . $name_gen);
     
-            $save_url = 'upload/multi_images_loc/' . $name_gen;
+            $save_url = 'upload/about_multi_images/' . $name_gen;
     
             MultiImage::findOrFail($updateMultiImage)->update([
                 'multi_image' => $save_url,

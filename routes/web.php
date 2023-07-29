@@ -10,6 +10,7 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\TechnologiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,20 @@ Route::controller(PortfolioController::class)->group(function () {
     Route::get('/delete/portfolio/{id}', 'deletePortfolio')->name('delete.portfolio');
     Route::get('/details/portfolio/{id}', 'detailsPortfolio')->name('details.portfolio');
     Route::get('/portfolio', 'portfolioPage')->name('portfolio.page');
+});
+
+// Home Technologies all Route
+Route::controller(TechnologiesController::class)->group(function () {
+    Route::get('/home/technologies', 'homeTechnologies')->name('home.technologies');
+    Route::post('/update/technologies', 'updateTechnologies')->name('update.technologies');
+    Route::get('/technologies/multi/image', 'technologiesMultiImage')->name('technologies.multi.image');
+    Route::post('/store/tech/multi/image', 'storeTechMutliImage')->name('store.tech.multi.image');
+    Route::get('/all/tech/multi/image', 'allTechMultiImage')->name('all.tech.multi.image');
+    Route::get('/edit/tech/multi/image/{id}', 'editTechMultiImage')->name('edit.tech.multi.image');
+    Route::post('/update/tech/multi/image', 'updateTechMultiImage')->name('update.tech.multi.image');
+    Route::get('/delete/tech/multi/image/{id}', 'deleteTechMultiImage')->name('delete.tech.multi.image');
+    Route::get('/technologies', 'technologies')->name('technologies_page');
+        
 });
 
 // Home Blog Category All Route

@@ -9,13 +9,12 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <ul class="about__icons__wrap">
-
+                    {{-- Adding all the images --}}
                     @foreach($allMultiImage as $item)
                     <li>
                         <img class="light" src="{{ asset($item->multi_image)}} " alt="XD">
                     </li>
                     @endforeach
-
                 </ul>
             </div>
             <div class="col-lg-6">

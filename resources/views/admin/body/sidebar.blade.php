@@ -104,7 +104,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
-                        <span>Blog Sector</span>
+                        <span>Blog Section</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('home.blog') }}">All Blog</a></li>
@@ -114,7 +114,18 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
-                        <span>Contact Message</span>
+                        <span>Technologies Section</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('home.technologies')}}">Home Technologies</a></li>
+                        <li><a href="{{ route('technologies.multi.image')}}">Add Tech Mutli Image</a></li>
+                        <li><a href="{{ route('all.tech.multi.image')}}">All Tech Mutli Image</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-profile-line"></i>
+                        <span>Contact Section</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('contact.message') }}">Contact Message</a></li>
@@ -123,7 +134,7 @@
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>
-                        <span>Footer Sector</span>
+                        <span>Footer Section</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('home.footer') }}">Footer</a></li>

@@ -16,8 +16,8 @@ $route = Route::current()->getName();
                             <div class="navbar__wrap main__menu d-none d-md-flex">
                                 <ul class="navigation">
                                     <li class="active"><a href="{{ url('/')}}">Home</a></li>
-                                    <li><a href="{{ route('about.page')}}">About</a></li>
-                                    {{-- <li><a href="services-details.html">Services</a></li> --}}
+                                    <li><a href="{{ route('about.page') }}">About</a></li>
+                                    <li><a href="{{ route('technologies.page') }}">Technologies</a></li>
                                     <li class="menu-item-has-children"><a href="{{ route('portfolio.page') }}">Portfolio</a>
                                     </li>
                                     <li class="menu-item-has-children"><a href="{{ route('blog') }}">Blog</a>

@@ -62,7 +62,7 @@ About Page | Portfolio
                             </div>
                         </div>
                         <p class="desc">{{ $about_page->short_description }}</p>
-                        <a href="about.html" class="btn">Download my resume</a>
+                        <a href="{{ $about_page->about_resume }}" class="btn" target="_blank">Download my resume</a>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@ About Page | Portfolio
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="awards-tab" data-bs-toggle="tab" data-bs-target="#awards" type="button"
-                                    role="tab" aria-controls="awards" aria-selected="false">awards</button>
+                                    role="tab" aria-controls="awards" aria-selected="false">courses | awards</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button"
@@ -98,15 +98,23 @@ About Page | Portfolio
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">Communication</h5>
+                                                <h5 class="title">PHP 8.x</h5>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span class="percentage">70%</span></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span class="percentage">90%</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">Brain Storming</h5>
+                                                <h5 class="title">Laravel</h5>
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span class="percentage">85%</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="about__skill__item">
+                                                <h5 class="title">HTML | CSS</h5>
                                                 <div class="progress">
                                                     <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span class="percentage">90%</span></div>
                                                 </div>
@@ -114,15 +122,15 @@ About Page | Portfolio
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">Resourcefulness</h5>
+                                                <h5 class="title">OOP PHP</h5>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="percentage">50%</span></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="percentage">60%</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">Figma</h5>
+                                                <h5 class="title">JavaSrcipt | jQuery</h5>
                                                 <div class="progress">
                                                     <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span class="percentage">65%</span></div>
                                                 </div>
@@ -130,7 +138,7 @@ About Page | Portfolio
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">Analytical Abilities</h5>
+                                                <h5 class="title">Bootstrap</h5>
                                                 <div class="progress">
                                                     <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><span class="percentage">80%</span></div>
                                                 </div>
@@ -138,25 +146,17 @@ About Page | Portfolio
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">Skeatch</h5>
+                                                <h5 class="title">My SQL | PostegreSQL</h5>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"><span class="percentage">45%</span></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"><span class="percentage">90%</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__skill__item">
-                                                <h5 class="title">User Research</h5>
+                                                <h5 class="title">Git | GitHub</h5>
                                                 <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"><span class="percentage">55%</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about__skill__item">
-                                                <h5 class="title">Adobe Tools</h5>
-                                                <div class="progress">
-                                                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span class="percentage">85%</span></div>
+                                                    <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"><span class="percentage">80%</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -169,44 +169,112 @@ About Page | Portfolio
                                         <div class="col-md-6 col-sm-9">
                                             <div class="about__award__item">
                                                 <div class="award__logo">
-                                                    {{-- <img src="assets/img/images/awards_01.png" alt=""> --}}
+                                                    <img src="{{ asset('frontend/assets/img/images/udemy.png')}}" alt="">
                                                 </div>
                                                 <div class="award__content">
-                                                    <h5 class="title">Best ux designer award in 2002</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                                                    <h5 class="title">PHP registration, login and content management system</h5>
+                                                    <p>Through the course process of creating a dynamic website that allows users to register accounts, 
+                                                        log in securely, and manage their content. The curriculum covers fundamental concepts of PHP, 
+                                                        such as user registration, user login, content management system, database integration MySQL, 
+                                                        security vulnerabilities cross-site scripting (XSS), and front-end development using HTML, 
+                                                        CSS, and JavaScript.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-9">
                                             <div class="about__award__item">
                                                 <div class="award__logo">
-                                                    {{-- <img src="assets/img/images/awards_02.png" alt=""> --}}
+                                                    <img src="{{ asset('frontend/assets/img/images/udemy.png')}}" alt="">
                                                 </div>
                                                 <div class="award__content">
-                                                    <h5 class="title">BBA final examination 2001</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                                                    <h5 class="title">PHP for Beginners - Become a PHP Master - CMS Project </h5>
+                                                    <p>The main project of the course revolves around creating a fully functional CMS from scratch, 
+                                                        including user registration and authentication, managing content, and implementing user roles 
+                                                        and permissions. Database integration, covered include database design, creating tables, and 
+                                                        executing SQL queries using PHP. Front-End Development, gain practical knowledge of HTML, CSS, 
+                                                        and JavaScript to build a user-friendly and visually appealing interface for the CMS. Security 
+                                                        and best practices emphasize essential security practices in PHP development, such as data validation, 
+                                                        preventing SQL injection, and handling user authentication securely.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-9">
                                             <div class="about__award__item">
                                                 <div class="award__logo">
-                                                    {{-- <img src="assets/img/images/awards_03.png" alt=""> --}}
+                                                    <img src="{{ asset('frontend/assets/img/images/udemy.png')}}" alt="">
                                                 </div>
                                                 <div class="award__content">
-                                                    <h5 class="title">User research award 2020</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                                                    <h5 class="title">Introduction to Spatial Databases with PostGIS and QGIS 3</h5>
+                                                    <p>Introduction to spatial databases with PostgreSQL. The course introduced the 
+                                                        concept of spatial databases and their significance in handling geospatial data 
+                                                        and non-geospatial data for data analysis. Introduction to PostGIS, understanding 
+                                                        geospatial data, spatial queries and operations, integration with QGIS 3, practical projects, 
+                                                        and geospatial analysis. The course could touch upon geospatial analysis techniques, 
+                                                        such as buffering, spatial overlays, and proximity analysis, using PostGIS and QGIS 3.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-9">
                                             <div class="about__award__item">
                                                 <div class="award__logo">
-                                                    {{-- <img src="assets/img/images/awards_04.png" alt=""> --}}
+                                                    <img src="{{ asset('frontend/assets/img/images/udemy.png')}}" alt="">
                                                 </div>
                                                 <div class="award__content">
-                                                    <h5 class="title">Dsigning award 2021</h5>
-                                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                                                    <h5 class="title">Introduction to web programming for GIS applications</h5>
+                                                    <p>Fundamentals of web programming such as HTML, CSS, and JavaScript. 
+                                                        Web mapping libraries, popular web mapping libraries, and APIs, such as Leaflet,
+                                                        Mapbox, or google maps API. Handling geospatial data, working with geospatial data 
+                                                        formats geoJSON, shapefiles. Interactive web maps, including popups, markers, and 
+                                                        custom map controls, enhance user experience and engagement. Geospatial analysis, 
+                                                        using programming tools and libraries. GIS application development, building web map 
+                                                        applications from scratch. Best practices and deployment deploying and hosting web-based projects.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-9">
+                                            <div class="about__award__item">
+                                                <div class="award__logo">
+                                                    <img src="{{ asset('frontend/assets/img/images/udemy.png')}}" alt="">
+                                                </div>
+                                                <div class="award__content">
+                                                    <h5 class="title">Display and analyze GIS data on the web with Leaflet</h5>
+                                                    <p>Introduction to web mapping, to visualize and analyze geospatial data on the internet. 
+                                                        JavaScript leaflet is a popular open-source JavaScript library used for building 
+                                                        interactive web maps that cover how to set up a leaflet, create a basic map, and add 
+                                                        various map layers and markers. Working with data, different data formats commonly used 
+                                                        in the geospatial world, such as geoJSON, and how to load this data into the leaflet library. 
+                                                        Displaying data in web map applications, interactivity, popup features, and geospatial analysis 
+                                                        using leaflet and JavaScript. Advanced features working with plugins, incorporating third-party APIs, 
+                                                        and implementing custom map controls. Projects and case studies, analyzing real-world GIS data on web
+                                                         maps using Leaflet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-9">
+                                            <div class="about__award__item">
+                                                <div class="award__logo">
+                                                    <img src="{{ asset('frontend/assets/img/images/fcc.png')}}" alt="">
+                                                </div>
+                                                <div class="award__content">
+                                                    <h5 class="title">JavaScript Algorithms and Data Structures</h5>
+                                                    <p>Course Structure, essential algorithms, and data structures. 
+                                                        Algorithmic problem solving, data structures in JavaScript,
+                                                        and understanding their use cases. Sorting and searching algorithms,
+                                                        recursion big O notation, ES6 concepts, practice, and projects</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-9">
+                                            <div class="about__award__item">
+                                                <div class="award__logo">
+                                                    <img src="{{ asset('frontend/assets/img/images/fcc.png')}}" alt="">
+                                                </div>
+                                                <div class="award__content">
+                                                    <h5 class="title">Legacy Responsive Web Design</h5>
+                                                    <p>HTML and CSS fundamentals, media queries, to create responsive designs. 
+                                                        Flexbox and grid, accessibility, introducing web accessibility principles. 
+                                                        Basic javascript for controlling functionality in web pages. Projects, 
+                                                        in real-world scenarios. Free and community-driven, responsive web design.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -218,32 +286,41 @@ About Page | Portfolio
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="about__education__item">
-                                                <h3 class="title">DPR Engineering Dhaka University</h3>
-                                                <span class="date">2004 – 2016</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                                alteration in some form, by injected humour.</p>
+                                                <h3 class="title">MSc Geographic Information System GIS</h3>
+                                                <span class="date">2019 - 2022</span>
+                                                <p>University of Ulster 
+                                                    Key Highlights:
+                                                    <ol style="list-style: none; margin-left: 20px; padding-left: 0;">
+                                                        <li style="list-style-type: disc; color: black;">Successfully completed a Master's degree in Geographic Information Systems through distance learning at the University of Ulster.</li>
+                                                        <li style="list-style-type: disc; color: black;">Specialized in various modules, including GIS in Business and Society, Web-Based GIS, Spatial Analysis and Modelling, GIS Databases, Remote Sensing, and Automation with Python.</li>
+                                                        <li style="list-style-type: disc; color: black;">Demonstrated proficiency in utilizing Python and relevant libraries such as GeoPandas, Pandas, Numpy, Matplotlib, and Contextily to develop a Python map project for visualizing spatial data.</li>
+                                                        <li style="list-style-type: disc; color: black;">Principles of GIS,</li>
+                                                        <li style="list-style-type: disc; color: black;">Spatial Data Management</li>
+                                                        <li style="list-style-type: disc; color: black;">GIS in Business and Society,</li>
+                                                        <li style="list-style-type: disc; color: black;">Web-GIS Html5, CSS, PHP, JavaScript, PostsgreSQL</li>
+                                                        <li style="list-style-type: disc; color: black;">Remote Sensing</li>
+                                                        <li style="list-style-type: disc; color: black;">PostgreSQL & PostGIS & QGIS</li>
+                                                        <li style="list-style-type: disc; color: black;">Photogrammetry and Advanced Image Analysis</li>
+                                                        <li style="list-style-type: disc; color: black;">Programming for GIS and Remote Sensing (Python, GeoPandas, Pandas, Arcpy)</li>
+                                                    </ol>
+                                                </p>
                                             </div>
+
                                         </div>
                                         <div class="col-md-6">
                                             <div class="about__education__item">
-                                                <h3 class="title">Product Designer at google</h3>
-                                                <span class="date">2021 – Present</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,There are many variations of passages of Lorem Ipsum available.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about__education__item">
-                                                <h3 class="title">Computer Science - england</h3>
-                                                <span class="date">2008 – 2012</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,There are many variations of passages of Lorem Ipsum available.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="about__education__item">
-                                                <h3 class="title">Pro product design with udemey</h3>
-                                                <span class="date">2016 - 2020</span>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,There are many variations of passages of Lorem Ipsum available, but the majority have suffered
-                                                alteration in some form, by injected humour.</p>
+                                                <h3 class="title">BEng Environmental Engineering</h3>
+                                                <span class="date">2007 - 2013</span>
+                                                <p>Technological University of Western Macedonia 
+                                                    Key Highlights:
+                                                    <ul style="list-style-type: none; margin-left: 20px; padding-left: 0;">
+                                                        <li style="list-style-type: disc; color: black;">Completed a Bachelor's degree in Environmental Engineering from the Technological University of Western Macedonia.</li>
+                                                        <li style="list-style-type: disc; color: black;">Acquired expertise in applying engineering principles to address environmental challenges.</li>
+                                                        <li style="list-style-type: disc; color: black;">Specialized in utilizing technological solutions to ensure sustainable business operations within time and budget constraints.</li>
+                                                        <li style="list-style-type: disc; color: black;">Implemented industrial design processes to assess and mitigate water degradation.</li>
+                                                        <li style="list-style-type: disc; color: black;">Developed strategies for water data analytics to improve water supply systems and ensure safety.</li>
+                                                    </ul>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -481,7 +558,7 @@ About Page | Portfolio
                 </div>
             </div>
             <div class="blog__button text-center">
-                <a href="blog.html" class="btn">more blog</a>
+                <a href="{{ route('blog') }}" class="btn">more blog</a>
             </div>
         </div>
     </section>

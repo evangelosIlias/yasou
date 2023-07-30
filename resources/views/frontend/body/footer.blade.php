@@ -37,7 +37,7 @@
                        <h4 class="title">socially connect</h4>
                    </div>
                    <div class="footer__widget__social">
-                       <p>Lorem ipsum dolor sit amet enim. <br> Etiam ullamcorper.</p>
+                       <p>Reach me out in soscial media if you have any question</p>
                        <ul class="footer__social__list">
                            <li><a href="{{ $homeFooter->footer_linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
                        </ul>

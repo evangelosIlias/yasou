@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <p class="desc">{{ $homeTechnologies->tech_short_description }}</p>
-                    <a href="{{ route('technologies_page')}}" class="btn">Check here</a>
+                    <a href="{{ route('technologies.page') }}" class="btn">Check here</a>
                 </div>
             </div>
         </div>

@@ -170,7 +170,8 @@ class TechnologiesController extends Controller
     // Return the view in frontend for technologies page
     public function technologies() {
         $technologies_page = Technologies::latest()->first();
-        return view('frontend.technologies_page', compact('technologies_page'));
+        $techMultiImage = TechMutliImage::all();
+        return view('frontend.technologies_page', compact('technologies_page', 'techMultiImage'));
     }
        
 }

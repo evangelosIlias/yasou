@@ -86,7 +86,7 @@ Route::controller(TechnologiesController::class)->group(function () {
     Route::get('/edit/tech/multi/image/{id}', 'editTechMultiImage')->name('edit.tech.multi.image');
     Route::post('/update/tech/multi/image', 'updateTechMultiImage')->name('update.tech.multi.image');
     Route::get('/delete/tech/multi/image/{id}', 'deleteTechMultiImage')->name('delete.tech.multi.image');
-    Route::get('/technologies', 'technologies')->name('technologies_page');
+    Route::get('/technologies', 'technologies')->name('technologies.page');
         
 });
 

@@ -340,8 +340,8 @@ About Page | Portfolio
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="section__title text-center">
-                        <span class="sub-title">02 - my Services</span>
-                        <h2 class="title">Provide awesome service</h2>
+                        <span class="sub-title">02 - technologies</span>
+                        <h2 class="title">Technolgoies i have used</h2>
                     </div>
                 </div>
             </div>
@@ -353,7 +353,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon01.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Business Strategy</a></h3>
+                                <h3 class="title"><a href="services-details.html">PHP</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -365,7 +365,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon02.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Visual Design</a></h3>
+                                <h3 class="title"><a href="services-details.html">Laravel</a></h3>
                                 <p>Strategy is a forward-looking plan for your brand’s behavior.Strategy is a forward-looking plan.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -377,7 +377,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon03.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Product Design</a></h3>
+                                <h3 class="title"><a href="services-details.html">HTML</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -389,7 +389,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon05.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Animation</a></h3>
+                                <h3 class="title"><a href="services-details.html">CSS</a></h3>
                                 <p>Strategy is a forward-looking plan for your brand’s behavior.Strategy is a forward-looking plan.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -401,7 +401,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon06.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Marketing</a></h3>
+                                <h3 class="title"><a href="services-details.html">JavaScript</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -413,7 +413,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon05.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Brand strategy</a></h3>
+                                <h3 class="title"><a href="services-details.html">Bootstrap</a></h3>
                                 <p>Strategy is a forward-looking plan for your brand’s behavior.Strategy is a forward-looking plan.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -425,7 +425,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon04.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Graphic Design</a></h3>
+                                <h3 class="title"><a href="services-details.html">MySQL | PostgreSQL</a></h3>
                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -437,7 +437,7 @@ About Page | Portfolio
                                 {{-- <img src="assets/img/icons/services_light_icon07.png" alt=""> --}}
                             </div>
                             <div class="services__style__two__content">
-                                <h3 class="title"><a href="services-details.html">Visual Design</a></h3>
+                                <h3 class="title"><a href="services-details.html">Git | GitHub</a></h3>
                                 <p>Strategy is a forward-looking plan for your brand’s behavior.Strategy is a forward-looking plan.</p>
                                 <a href="services-details.html" class="services__btn"><i class="far fa-long-arrow-right"></i></a>
                             </div>
@@ -445,11 +445,11 @@ About Page | Portfolio
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br><br><br><br><br><br><br><br>
     </section>
     <!-- services-area-end -->
 
-    <!-- testimonial-area -->
+    <!-- testimonial-area 
     <section class="testimonial testimonial__style__two">
         <div class="container">
             <div class="row justify-content-center">
@@ -505,9 +505,9 @@ About Page | Portfolio
             </ul>
         </div>
     </section>
-    <!-- testimonial-area-end -->
+    testimonial-area-end -->
 
-    <!-- blog-area -->
+    <!-- blog-area 
     <section class="blog blog__style__two">
         <div class="container">
             <div class="row gx-0 justify-content-center">
@@ -558,11 +558,11 @@ About Page | Portfolio
                 </div>
             </div>
             <div class="blog__button text-center">
-                <a href="{{ route('blog') }}" class="btn">more blog</a>
+                <a href="" class="btn">more blog</a>
             </div>
         </div>
     </section>
-    <!-- blog-area-end -->
+    blog-area-end -->
 
     <!-- contact-area -->
     <section class="homeContact">

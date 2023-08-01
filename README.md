@@ -28,7 +28,7 @@ Blog Details
 
 Admin panel
 
-![](test_images/example_5.png)
+![](test_images/example_6.png)
 
 Nearly all the areas are done now and ready to go, the website is controlled by the admin panel 
 

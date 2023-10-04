@@ -4,7 +4,7 @@
 
 Creating a personal portfolio based on the Laravel framework. The philosophy behind this project is to control everything with an Admin panel
 
-The website uses mainly Laravel 10x including Html and CSS and JavaScript, jQuery for the most frontend functionality, and MySQL database
+The website uses mainly Laravel including Html CSS and JavaScript, jQuery for the most frontend functionality, and MySQL database
 
 Main area
 
